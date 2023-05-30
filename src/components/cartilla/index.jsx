@@ -7,6 +7,7 @@ import Bolilla from './bolilla';
 const Cartilla = ({data, onSelectItem, extraData, numColumns, heightCartilla, widthBolilla}) => {
     
     const renderItem = ({item})=>{       
+        
         const sytleBolilla = {
             backgroundColor: theme.backgroundColors.bolillaNoSelect,
             fontSize: theme.fontSizes.bolillaNoSelect,
@@ -14,7 +15,7 @@ const Cartilla = ({data, onSelectItem, extraData, numColumns, heightCartilla, wi
             press: onSelectItem
         };
         
-        if(extraData.find(x => x === item.value) !== undefined){
+        if(extraData.find(x => x === item.value)!== undefined){
             sytleBolilla.backgroundColor = theme.backgroundColors.bolillaSelect,
             sytleBolilla.fontSize= theme.fontSizes.bolillaSelect;
             sytleBolilla.textColor= theme.colors.bolillaSelect;
